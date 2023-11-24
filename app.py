@@ -4,8 +4,7 @@ import altair as alt
 import numpy as np
 import plotly.graph_objects as go
 import math
-import joblib
-import sklearn
+# import joblib
 from PIL import Image
 
 st.set_page_config(
