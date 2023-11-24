@@ -1,7 +1,7 @@
 pandas
 streamlit
 altair
-matplotlib
+sklearn
 numpy
 plotly
 joblib
