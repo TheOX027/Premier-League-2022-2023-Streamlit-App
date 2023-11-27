@@ -415,7 +415,7 @@ with tab3 :
 with tab4 :         
     # model_path = "model.joblib"
     # model = open(model_path, "rb")
-    model = joblib.load("model.joblib")
+    model = joblib.load("model.joblib", "r")
     
     st.header('Predict Premier League 2023/24 Match Result')
     
