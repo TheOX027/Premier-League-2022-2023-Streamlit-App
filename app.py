@@ -4,7 +4,7 @@ import altair as alt
 import numpy as np
 import plotly.graph_objects as go
 import math
-# import joblib
+import joblib
 from PIL import Image
 
 st.set_page_config(
@@ -413,9 +413,9 @@ with tab3 :
 
     
 with tab4 :         
-    model_path = "model.joblib"
-    model = open(model_path, "rb")
-    # model = joblib.load("model.joblib")
+    # model_path = "model.joblib"
+    # model = open(model_path, "rb")
+    model = joblib.load("model.joblib")
     
     st.header('Predict Premier League 2023/24 Match Result')
     
