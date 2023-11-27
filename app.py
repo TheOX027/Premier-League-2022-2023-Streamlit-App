@@ -618,9 +618,22 @@ with tab4 :
         result_prediction = model.predict(input_data)
         
         # 'result': {'W': 0, 'D': 1, 'L': 2},
-        if result_prediction[0] == 0:
-            st.success(f'Home Team Will Win')
-        elif result_prediction[0] == 1:
-            st.success('Home Team Will Draw')
-        elif result_prediction[0] == 2:
-            st.success('Home Team Will Lost')
+        # if result_prediction[0] == 0:
+        #     st.success(f'Home Team Will Win')
+        # elif result_prediction[0] == 1:
+        #     st.success('Home Team Will Draw')
+        # elif result_prediction[0] == 2:
+        #     st.success('Home Team Will Lost')
+        try:
+            result_prediction = model.predict(input_data)
+
+            # 'result': {'W': 0, 'D': 1, 'L': 2},
+            if result_prediction[0] == 0:
+                st.success(f'Home Team Will Win')
+            elif result_prediction[0] == 1:
+                st.success('Home Team Will Draw')
+            elif result_prediction[0] == 2:
+                st.success('Home Team Will Lost')
+
+        except Exception as e:
+            st.error(f"An error occurred: {e}")
