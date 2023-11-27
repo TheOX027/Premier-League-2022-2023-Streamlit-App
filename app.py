@@ -416,6 +416,7 @@ with tab4 :
     # model_path = "model.joblib"
     # model = open(model_path, "rb")
     model = joblib.load("model.joblib")
+    # D:\GitHub\TheOX027\\model.joblib
     
     st.header('Predict Premier League 2023/24 Match Result')
     
