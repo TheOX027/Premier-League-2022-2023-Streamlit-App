@@ -615,7 +615,7 @@ with tab4 :
                 home_offsides_ratio, away_offsides_ratio
             ]])
         
-        result_prediction = model.predict(input_data)
+        # result_prediction = model.predict(input_data)
         
         # 'result': {'W': 0, 'D': 1, 'L': 2},
         # if result_prediction[0] == 0:
