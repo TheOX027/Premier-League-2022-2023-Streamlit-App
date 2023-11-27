@@ -624,16 +624,31 @@ with tab4 :
         #     st.success('Home Team Will Draw')
         # elif result_prediction[0] == 2:
         #     st.success('Home Team Will Lost')
-        try:
-            result_prediction = model.predict(input_data)
+        # try:
+        result_prediction = model.predict(np.array([[
+            ht_home_score, ht_away_score, home_shots_on_target,
+            away_shots_on_target, home_shots, away_shots,
+            home_goal_to_shot_ratio, away_goal_to_shot_ratio,
+            successful_passes_home, successful_passes_away,
+            performance_change_home, performance_change_away ,
+            recent_form_home, recent_form_away, win_streak_home ,
+            win_streak_away, avg_goals_at_venue, home_disciplinary_points ,
+            unbeaten_streak_home, unbeaten_streak_away,
+            total_points_prev_matches_home, total_points_prev_matches_away,
+            possession_growth, home_touches_ratio, away_touches_ratio,
+            home_clearances_ratio, away_clearances_ratio,  home_team,
+            away_team, referee, away_disciplinary_points, 
+            home_tackles_ratio, away_tackles_ratio ,  
+            home_offsides_ratio, away_offsides_ratio
+        ]]))
 
-            # 'result': {'W': 0, 'D': 1, 'L': 2},
-            if result_prediction[0] == 0:
-                st.success(f'Home Team Will Win')
-            elif result_prediction[0] == 1:
-                st.success('Home Team Will Draw')
-            elif result_prediction[0] == 2:
-                st.success('Home Team Will Lost')
+        # 'result': {'W': 0, 'D': 1, 'L': 2},
+        if result_prediction[0] == 0:
+            st.success(f'Home Team Will Win')
+        elif result_prediction[0] == 1:
+            st.success('Home Team Will Draw')
+        elif result_prediction[0] == 2:
+            st.success('Home Team Will Lost')
 
-        except Exception as e:
-            st.error(f"An error occurred: {e}")
+    # except Exception as e:
+        # st.error(f"An error occurred: {e}")
