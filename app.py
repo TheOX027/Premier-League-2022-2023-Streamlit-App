@@ -4,7 +4,6 @@ import altair as alt
 import numpy as np
 import plotly.graph_objects as go
 import math
-import pickle
 import joblib
 from PIL import Image
 
@@ -421,7 +420,6 @@ with tab4 :
     # model = pickle.load(open('model.pkl', 'rb'))
     
     # model = joblib.load(r'model.joblib')
-    # D:\GitHub\TheOX027\\model.joblib
 
     st.header('Predict Premier League 2023/24 Match Result')
     
