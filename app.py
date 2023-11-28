@@ -413,7 +413,7 @@ with tab3 :
 
     
 with tab4 :         
-    # model_path = "model.joblib"
+    # model = "model.joblib"
     model = joblib.load("model.joblib")
     # model = joblib.load(r'model.joblib')
     # D:\GitHub\TheOX027\\model.joblib
