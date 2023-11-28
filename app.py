@@ -4,6 +4,7 @@ import altair as alt
 import numpy as np
 import plotly.graph_objects as go
 import math
+import joblib
 from PIL import Image
 
 st.set_page_config(
@@ -412,9 +413,9 @@ with tab3 :
 
     
 with tab4 :         
-    model_path = "model.joblib"
-    model = open(model_path, "r")
-    # model = joblib.load("model.joblib")
+    # model_path = "model.joblib"
+    # model = open(model_path, "r")
+    model = joblib.load("model.joblib")
     # D:\GitHub\TheOX027\\model.joblib
     
     st.header('Predict Premier League 2023/24 Match Result')
@@ -599,20 +600,41 @@ with tab4 :
         
         
         input_data = np.array([[
-                ht_home_score, ht_away_score, home_shots_on_target,
-                away_shots_on_target, home_shots, away_shots,
-                home_goal_to_shot_ratio, away_goal_to_shot_ratio,
-                successful_passes_home, successful_passes_away,
-                performance_change_home, performance_change_away ,
-                recent_form_home, recent_form_away, win_streak_home ,
-                win_streak_away, avg_goals_at_venue, home_disciplinary_points ,
-                unbeaten_streak_home, unbeaten_streak_away,
-                total_points_prev_matches_home, total_points_prev_matches_away,
-                possession_growth, home_touches_ratio, away_touches_ratio,
-                home_clearances_ratio, away_clearances_ratio,  home_team,
-                away_team, referee, away_disciplinary_points, 
-                home_tackles_ratio, away_tackles_ratio ,  
-                home_offsides_ratio, away_offsides_ratio
+                ht_home_score,
+                ht_away_score,
+                home_shots_on_target,
+                away_shots_on_target,
+                home_shots,
+                away_shots,
+                home_goal_to_shot_ratio,
+                away_goal_to_shot_ratio,
+                successful_passes_home,
+                successful_passes_away,
+                performance_change_home,
+                performance_change_away,
+                recent_form_home,
+                recent_form_away,
+                win_streak_home,
+                win_streak_away,
+                avg_goals_at_venue,
+                home_disciplinary_points,
+                unbeaten_streak_home,
+                unbeaten_streak_away,
+                total_points_prev_matches_home,
+                total_points_prev_matches_away,
+                possession_growth,
+                home_touches_ratio,
+                away_touches_ratio,
+                home_clearances_ratio,
+                away_clearances_ratio,
+                home_team,
+                away_team,
+                referee,
+                away_disciplinary_points,
+                home_tackles_ratio,
+                away_tackles_ratio,
+                home_offsides_ratio,
+                away_offsides_ratio
             ]])
         
         result_prediction = model.predict(input_data)
