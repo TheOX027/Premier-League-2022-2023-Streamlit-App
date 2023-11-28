@@ -414,8 +414,8 @@ with tab3 :
     
 with tab4 :         
     model_path = "model.joblib"
-    model = open(model_path)
-    # model = joblib.load("model.joblib")
+    # model = open("D:\GitHub\TheOX027\Premier-League-2022-2023-Streamlit-App\model.joblib")
+    model = joblib.load(model_path)
     # D:\GitHub\TheOX027\\model.joblib
 
     st.header('Predict Premier League 2023/24 Match Result')
