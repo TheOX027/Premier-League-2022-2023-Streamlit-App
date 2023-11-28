@@ -4,7 +4,8 @@ import altair as alt
 import numpy as np
 import plotly.graph_objects as go
 import math
-# import pickle
+import pickle
+import joblib
 from PIL import Image
 
 st.set_page_config(
@@ -415,9 +416,9 @@ with tab3 :
 with tab4 :         
     # model = "model.joblib"
     # model = joblib.load("model.joblib")
-    # model = joblib.load("model.joblib")
+    model = joblib.load(open("model.joblib", 'rb'))
     
-    model = (open('model.pkl', 'rb'))
+    # model = pickle.load(open('model.pkl', 'rb'))
     
     # model = joblib.load(r'model.joblib')
     # D:\GitHub\TheOX027\\model.joblib

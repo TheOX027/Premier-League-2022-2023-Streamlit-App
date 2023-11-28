@@ -3,4 +3,5 @@ streamlit
 altair
 numpy
 plotly
+joblib
 pickle
