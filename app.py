@@ -598,6 +598,8 @@ with tab4 :
         home_offsides = (int(home_offsides)-0) / (14-0)
         away_offsides = (int(away_offsides)-0) / (12-0)
         
+        win_streak_home = int(win_streak_home)
+        win_streak_away = int(win_streak_away)
         
         input_data = np.array([[
                 ht_home_score,
