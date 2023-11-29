@@ -4,4 +4,4 @@ altair
 numpy
 plotly
 joblib
-sklearn
+pickle

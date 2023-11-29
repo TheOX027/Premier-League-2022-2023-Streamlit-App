@@ -5,6 +5,7 @@ import numpy as np
 import plotly.graph_objects as go
 import math
 import joblib
+import pickle
 from PIL import Image
 
 st.set_page_config(
@@ -415,9 +416,9 @@ with tab3 :
 with tab4 :         
     # model = "model.joblib"
     # model = joblib.load("model.joblib")
-    model = joblib.load(open("model.joblib", 'rb'))
+    # model = joblib.load(open("model.joblib", 'rb'))
     
-    # model = pickle.load(open('model.pkl', 'rb'))
+    model = pickle.load(open('model.sav', 'rb'))
     
     # model = joblib.load(r'model.joblib')
 
