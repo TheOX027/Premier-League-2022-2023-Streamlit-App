@@ -604,7 +604,7 @@ with tab4 :
         win_streak_home = int(win_streak_home)
         win_streak_away = int(win_streak_away)
         
-        input_data = np.array([[
+        input_data = np.asarray([
                 ht_home_score,
                 ht_away_score,
                 home_shots_on_target,
@@ -640,9 +640,10 @@ with tab4 :
                 away_tackles_ratio,
                 home_offsides_ratio,
                 away_offsides_ratio
-            ]])
+            ])
         
-        result_prediction = model.predict(input_data)
+        input_data_reshaped = input_data.reshape(1, -1)
+        result_prediction = model.predict(input_data_reshaped)
         
         # 'result': {'W': 0, 'D': 1, 'L': 2},
         if result_prediction[0] == 0:
