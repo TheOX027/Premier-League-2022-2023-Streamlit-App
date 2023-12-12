@@ -441,14 +441,14 @@ with tab4 :
         "Brentford" : 7, "Brighton & Hove Albion" : 8,
         "Burnley" : 9, "Chelsea" : 12, "Crystal Palace" : 13, 
         "Everton" : 15, "Fulham" : 16, "Liverpool" : 21,
-        "Luton Town" : 100, "Man. City" : 22, "Man. United" : 23, 
+        "Man. City" : 22, "Man. United" : 23, 
         "Newcastle United" : 26, "Nott'm Forrst" : 28,
         "Sheffield United" : 32, "Tottenham Hostpur" : 37, 
         "West Ham United" : 40, "Wolves" : 42
         }
     no_team_options = [0, 1, 6, 7, 8, 
                        9, 12, 13, 15, 16, 21, 
-                       100, 22, 23, 26, 28, 
+                       22, 23, 26, 28, 
                        32, 37, 40, 42]
 
     with cols_home:
