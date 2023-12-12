@@ -415,7 +415,7 @@ with tab3 :
     
 with tab4 :         
     model = pickle.load(open('model.pkl', 'rb'))    
-    model = joblib.load('model.joblib')    
+    # model = joblib.load('model.joblib')    
 
     st.header('Predict Premier League 2023/24 Match Result')
     
