@@ -1,7 +1,10 @@
 pandas
 streamlit
-altair
 numpy
 plotly
-joblib
-pickle
+catboost
+scikit-learn
+streamlit_extras
+streamlit_option_menu
+streamlit_elements
+streamlit_echarts
